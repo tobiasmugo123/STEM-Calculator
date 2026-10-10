@@ -3,27 +3,24 @@ import math
 
 def f1(x):
     return math.sin(x) / x
-# test: lim(f1, 0)  -> expected limit: 1
-# f1(0) crashes with ZeroDivisionError, so this checks that you never
-# evaluate at a itself.
+# test: lim(f1, 0) expected limit: 1
+# f1(0) crashes with ZeroDivisionError
 
 
 def f2(x):
     if x == 1:
         return 5
     return x + 1
-# test: lim(f2, 1)  -> expected limit: 2 (f2(1) is 5, which must be ignored)
+# test: lim(f2, 1) expected limit: 2 (f2(1) is 5, which should be ignored
 
 
 def f3(x):
     return abs(x) / x   # -1 for x < 0, +1 for x > 0
-# test: lim(f3, 0)  -> no limit (the two sides disagree)
-
+# test: lim(f3, 0)  no limit 
 
 def f4(x):
     return 1 / x
-# test: lim(f4, 0)  -> no finite limit (sides blow up in opposite directions)
-
+# test: lim(f4, 0)  no finite limi
 
 def lim(func, a):
     left_approaches = a - 0.001
@@ -37,7 +34,7 @@ def lim(func, a):
             limit = (left_limit + right_limit) / 2
             return "The Limit is " + str(limit)
         else:
-            return ("The Left Limit is " + str(left_limit) + "\n" # None Output Fix
+            return ("The Left Limit is " + str(left_limit) + "\n" # Incase of left_limit != right_limit
                     "The Right Limit is " + str(right_limit) + "\n"
                     "No General Limit")
     except ZeroDivisionError:
