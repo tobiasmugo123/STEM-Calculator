@@ -1,0 +1,19 @@
+
+import math
+
+
+
+def round_at_99(x):
+    decimal = round(x % 1,2)
+
+
+    if decimal >= 0.99:
+        return math.ceil(x)
+    else:
+        return
+        
+
+
+# print(round_at_99(22.99)) It Works!
+
+# Possible Additions: maybe we could add rounding when its num.000001, e.g. 2.000001 rounding to 2 
