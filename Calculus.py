@@ -53,4 +53,6 @@ print("test")
 
 
 # Next Steps: Replace the classical limit approximation with a loop approximation for greater accuracy and handling for Vertical Asymptote functions.
+# Recon: I think we can approach loop approximations much later in the project, either near end semester or beginning of semester 2.
+# Next Steps: Make another function for limits when x approaches infinity.
 # Next Steps: Start Work on the derivative function
