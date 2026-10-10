@@ -1,5 +1,5 @@
 import math
-
+import miscellaneous
 
 def f1(x):
     return math.sin(x) / x
@@ -32,6 +32,9 @@ def lim(func, a):
         # Replace Code with Loops soon
         if math.isclose(left_limit, right_limit, abs_tol=0.01): # Approximation Fix
             limit = (left_limit + right_limit) / 2
+            decimal =  round(limit % 1,2) # New Addition: rounds the limit
+            if decimal >= 0.99:
+                limit = miscellaneous.round_at_99(limit)
             return "The Limit is " + str(limit)
         else:
             return ("The Left Limit is " + str(left_limit) + "\n" # Incase of left_limit != right_limit
@@ -50,3 +53,4 @@ print("test")
 
 
 # Next Steps: Replace the classical limit approximation with a loop approximation for greater accuracy and handling for Vertical Asymptote functions.
+# Next Steps: Start Work on the derivative function
