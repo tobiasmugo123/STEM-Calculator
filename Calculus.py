@@ -29,6 +29,7 @@ def lim(func, a):
     try:
         left_limit = func(left_approaches)
         right_limit = func(right_approaches)
+
         # Replace Code with Loops soon
         if math.isclose(left_limit, right_limit, abs_tol=0.01): # Approximation Fix
             limit = (left_limit + right_limit) / 2
@@ -43,16 +44,36 @@ def lim(func, a):
     except ZeroDivisionError:
         return "PlaceHolder"
 
+def derivative(f, a):
+    h = 0.001
+    result = (f(a + h) - f(a)) / h
+    return round(result, 2)  
 
-print(lim(f1, 0))
-print(lim(f2, 1))
-print(lim(f3, 0))
-print(lim(f4, 0))
-print(lim(lambda x: x / 2 + 0.25, 1))   # true limit is 0.75
-print("test")
+#def f5(x):
+    #return math.sin(x)
+#derivative
 
+#for i in range(10):
+   # print(derivative(f5, i))
+
+#for i in range(10):
+    #print(round(math.cos(i), 2))
+
+# Both for loops have the same output, derivative function working
+
+#print(lim(f1, 0))
+#print(lim(f2, 1))
+#print(lim(f3, 0))
+#print(lim(f4, 0))
+#print(lim(lambda x: x / 2 + 0.25, 1))   # true limit is 0.75
+#print("test")
 
 # Next Steps: Replace the classical limit approximation with a loop approximation for greater accuracy and handling for Vertical Asymptote functions.
 # Recon: I think we can approach loop approximations much later in the project, either near end semester or beginning of semester 2.
 # Next Steps: Make another function for limits when x approaches infinity.
 # Next Steps: Start Work on the derivative function
+
+# Next Steps: Replace the classical limit approximation with a loop approximation for greater accuracy and handling for Vertical Asymptote functions.
+# Recon: I think we can approach loop approximations much later in the project, either near end semester or beginning of semester 2.
+# Next Steps: Make another function for limits when x approaches infinity.
+# Next Steps: Start Work on the derivative function | Finished
